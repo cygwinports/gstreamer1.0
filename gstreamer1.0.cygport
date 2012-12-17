@@ -1,12 +1,13 @@
+ORIG_PN="gstreamer"
+inherit gstreamer
+
 NAME="gstreamer1.0"
-VERSION=1.0.2
+VERSION=1.0.3
 RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="GStreamer multimedia framework (1.0 branch)"
 DESCRIPTION="The core library for the GStreamer multimedia framework. It
 contains the headers, core library files, and core elements."
-ORIG_PN="gstreamer"
-inherit gstreamer
 
 PATCH_URI="01-plugin-loader.patch"
 
