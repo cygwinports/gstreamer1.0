@@ -2,7 +2,7 @@ ORIG_PN="gstreamer"
 inherit gstreamer
 
 NAME="gstreamer1.0"
-VERSION=1.0.5
+VERSION=1.0.7
 RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="GStreamer multimedia framework (1.0 branch)"
@@ -11,7 +11,7 @@ contains the headers, core library files, and core elements."
 
 PATCH_URI="01-plugin-loader.patch"
 
-PKG_NAMES="${PN} lib${PN}_0 lib${PN}-devel girepository-Gst1.0 girepository-GstCheck1.0"
+PKG_NAMES="${NAME} lib${NAME}_0 lib${NAME}-devel girepository-Gst1.0 girepository-GstCheck1.0"
 gstreamer1_0_CONTENTS="usr/bin/gst-* usr/share/doc/ usr/share/man/"
 girepository_Gst1_0_CONTENTS="--exclude=GstCheck* usr/*/gir*-1.0/Gst*-1.0.*"
 girepository_GstCheck1_0_CONTENTS="usr/*/gir*/GstCheck-1.0.*"
