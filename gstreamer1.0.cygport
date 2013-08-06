@@ -2,9 +2,9 @@ ORIG_PN="gstreamer"
 inherit gstreamer
 
 NAME="gstreamer1.0"
-VERSION=1.0.7
+VERSION=1.0.9
 RELEASE=1
-CATEGORY="Audio Video"
+CATEGORY="Libs"
 SUMMARY="GStreamer multimedia framework (1.0 branch)"
 DESCRIPTION="The core library for the GStreamer multimedia framework. It
 contains the headers, core library files, and core elements."
@@ -12,11 +12,12 @@ contains the headers, core library files, and core elements."
 PATCH_URI="01-plugin-loader.patch"
 
 PKG_NAMES="${NAME} lib${NAME}_0 lib${NAME}-devel girepository-Gst1.0 girepository-GstCheck1.0"
+gstreamer1_0_CATEGORY="Audio Video"
 gstreamer1_0_CONTENTS="usr/bin/gst-* usr/share/doc/ usr/share/man/"
 girepository_Gst1_0_CONTENTS="--exclude=GstCheck* usr/*/gir*-1.0/Gst*-1.0.*"
 girepository_GstCheck1_0_CONTENTS="usr/*/gir*/GstCheck-1.0.*"
 libgstreamer1_0_0_CONTENTS="--exclude=cyggstcheck-1.0-0.dll
-                             usr/bin/*-1.0-0.dll usr/lib/gstreamer-1.0/
+                             usr/bin/*-1.0-0.dll usr/lib/gstreamer-1.0/ usr/libexec/
                              usr/share/gtk-doc/html/gstreamer-plugins-1.0/
                              usr/share/locale/"
 libgstreamer1_0_devel_CONTENTS="--exclude=gstreamer-plugins-1.0
