@@ -2,7 +2,7 @@ ORIG_PN="gstreamer"
 inherit gstreamer
 
 NAME="gstreamer1.0"
-VERSION=1.2.3
+VERSION=1.2.4
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GStreamer multimedia framework (1.0 branch)"
@@ -29,11 +29,9 @@ src_compile() {
 	gstreamer_autoreconf
 
 	cd ${B}
-	# stdio_ext.h: requires __fbufsize
 	cygconf \
 		--enable-gtk-doc \
 		--disable-static --disable-tests --disable-examples \
-		ac_cv_header_stdio_ext_h=no \
 		ac_cv_header_winsock2_h=no
 
 	cygmake
