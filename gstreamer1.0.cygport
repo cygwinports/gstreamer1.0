@@ -2,7 +2,7 @@ ORIG_PN="gstreamer"
 inherit gstreamer
 
 NAME="gstreamer1.0"
-VERSION=1.6.3
+VERSION=1.6.4
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GStreamer multimedia framework (1.0 branch)"
@@ -19,6 +19,7 @@ girepository_GstCheck1_0_CONTENTS="usr/*/gir*/GstCheck-1.0.*"
 libgstreamer1_0_0_CONTENTS="--exclude=cyggstcheck-1.0-0.dll
                              usr/bin/*-1.0-0.dll usr/lib/gstreamer-1.0/ usr/libexec/
                              usr/share/locale/"
+libgstreamer1_0_devel_REQUIRES="girepository-Gst1.0 girepository-GstCheck1.0"
 libgstreamer1_0_devel_CONTENTS="usr/bin/cyggstcheck-1.0-0.dll usr/include/
                                 usr/lib/lib* usr/lib/pkgconfig/ usr/share/aclocal/"
 libgstreamer1_0_doc_CONTENTS="Doc"
