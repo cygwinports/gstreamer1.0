@@ -1,0 +1,12 @@
+--- origsrc/gstreamer-1.10.4/configure.ac	2017-02-23 04:11:45.000000000 -0600
++++ src/gstreamer-1.10.4/configure.ac	2017-03-05 03:06:13.933578300 -0600
+@@ -516,7 +516,8 @@ dnl which is present on OS X 10.6, iOS 3
+ AC_MSG_CHECKING(for pthread_setname_np(const char*))
+ AC_LINK_IFELSE(
+     [AC_LANG_PROGRAM(
+-        [#include <pthread.h>],
++        [#define _GNU_SOURCE
++         #include <pthread.h>],
+         [pthread_setname_np("example")])],
+     [AC_MSG_RESULT(yes)
+      AC_DEFINE(HAVE_PTHREAD_SETNAME_NP_WITHOUT_TID,1,
