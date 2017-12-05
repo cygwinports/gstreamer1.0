@@ -2,7 +2,7 @@ ORIG_PN="gstreamer"
 inherit gstreamer
 
 NAME="gstreamer1.0"
-VERSION=1.10.5
+VERSION=1.12.3
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GStreamer multimedia framework (1.0 branch)"
@@ -40,5 +40,3 @@ src_compile() {
 
 	cygmake
 }
-
-KEEP_LA_FILES="none"
