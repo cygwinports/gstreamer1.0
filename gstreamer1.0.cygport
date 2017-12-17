@@ -2,7 +2,7 @@ ORIG_PN="gstreamer"
 inherit gstreamer
 
 NAME="gstreamer1.0"
-VERSION=1.12.3
+VERSION=1.12.4
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GStreamer multimedia framework (1.0 branch)"
@@ -27,6 +27,8 @@ libgstreamer1_0_devel_CONTENTS="usr/bin/cyggstcheck-1.0-0.dll usr/include/
                                 usr/lib/lib* usr/lib/pkgconfig/ usr/share/aclocal/"
 libgstreamer1_0_doc_CONTENTS="Doc"
 libgstreamer1_0_doc_CONTENTS="usr/share/gtk-doc/"
+
+DIFF_EXCLUDES+=" bash-completion"
 
 src_compile() {
 	cd ${S}
